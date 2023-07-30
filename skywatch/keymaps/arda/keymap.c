@@ -1,4 +1,4 @@
-/* Copyright 2023 ozkan
+/* Copyright 2023 Arda Kilicdagi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -81,6 +81,7 @@ enum trackball_keycodes {
 enum combos {
   C_ESC,
   C_BSP,
+  C_TURKISH_I,
   C_DEL,
   C_LCMD,
   C_RCMD,
@@ -92,8 +93,9 @@ enum combos {
   C_LEFT_LAYER_ENTER
 };
 
-const uint16_t PROGMEM c_esc_combo[] = {KC_Q, KC_W, COMBO_END};
-const uint16_t PROGMEM c_bsp_combo[] = {KC_P, KC_QUOT, COMBO_END};
+const uint16_t PROGMEM c_esc_combo[] = {KC_Q, KC_A, COMBO_END};
+const uint16_t PROGMEM c_bsp_combo[] = {KC_P, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM c_turkish_i_combo[] = {KC_SCLN, TH_RSFT_DOT, COMBO_END};
 const uint16_t PROGMEM c_del_combo[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM c_lcmd_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM c_rcmd_combo[] = {KC_K, KC_L, COMBO_END};
@@ -107,6 +109,7 @@ const uint16_t PROGMEM c_left_layer_enter_combo[] = {KC_F, KC_G, COMBO_END};
 combo_t key_combos[] = {
     [C_ESC] = COMBO(c_esc_combo, KC_ESC),
     [C_BSP] = COMBO(c_bsp_combo, KC_BSPC),
+    [C_TURKISH_I] = COMBO(c_turkish_i_combo, KC_QUOT),
     [C_DEL] = COMBO(c_del_combo, KC_DEL),
     [C_LCMD] = COMBO(c_lcmd_combo, KC_LGUI),
     [C_RCMD] = COMBO(c_rcmd_combo, KC_LGUI),
