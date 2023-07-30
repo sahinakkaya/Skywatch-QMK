@@ -36,20 +36,30 @@ jobs:
         run: cp -R skywatch/ qmk_firmware/keyboards/
       - name: Prepare qmk_firmware folder via
         run: cp -R skywatch/ vial-qmk/keyboards/
-      - name: Build skywatch-keyboard firmware
-        working-directory: ./qmk_firmware
-        run: qmk compile -kb skywatch -km default 
-      - name: Archive
-        uses: actions/upload-artifact@v2
-        with:
-          name: skywatch-keyboard
-          path: qmk_firmware/skywatch_default.uf2
 
-      - name: Build skywatch-keyboard firmware via
+      # - name: Build skywatch-keyboard firmware
+      #   working-directory: ./qmk_firmware
+      #   run: qmk compile -kb skywatch -km default 
+      # - name: Archive
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: skywatch-keyboard
+      #     path: qmk_firmware/skywatch_default.uf2
+
+      # - name: Build skywatch-keyboard firmware via
+      #   working-directory: ./vial-qmk
+      #   run: qmk compile -kb skywatch -km vial 
+      # - name: Archive
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: skywatch-keyboard
+      #     path: vial-qmk/skywatch_vial.uf2
+
+      - name: Build skywatch-keyboard firmware arda
         working-directory: ./vial-qmk
-        run: qmk compile -kb skywatch -km vial 
+        run: qmk compile -kb skywatch -km arda
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
           name: skywatch-keyboard
-          path: vial-qmk/skywatch_vial.uf2
+          path: vial-qmk/skywatch_arda.uf2

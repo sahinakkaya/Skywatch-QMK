@@ -449,5 +449,3 @@ combo_t key_combos[] = {
   [ENT]  = COMBO(c_enter, KC_ENT),
   [CAPS] = COMBO(c_caps, KC_CAPS),
 };
-
-
