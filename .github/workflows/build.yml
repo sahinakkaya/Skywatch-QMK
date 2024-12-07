@@ -57,9 +57,9 @@ jobs:
 
       - name: Build skywatch-keyboard firmware arda
         working-directory: ./vial-qmk
-        run: qmk compile -kb skywatch -km arda
+        run: qmk compile -kb skywatch -km default
       - name: Archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: skywatch-keyboard
-          path: vial-qmk/skywatch_arda.uf2
+          path: vial-qmk/skywatch_default.uf2
